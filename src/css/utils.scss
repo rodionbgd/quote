@@ -1,0 +1,52 @@
+$main-color: #0087c9;
+$btn-color: #ff9932;
+$white-color: #fff;
+$green-color: green;
+$red-color: red;
+
+$br: 4px;
+$body-bg: #eaeaea;
+$form-bg: #13232f;
+$white: #ffffff;
+
+$main: #1ab188;
+$main-light: lighten($main, 5%);
+$main-dark: darken($main, 5%);
+
+$gray-light: #a0b3b0;
+$gray: #ddd;
+
+.font-bold {
+  font-weight: bold;
+}
+.font-1_2rem {
+  font-size: 1.2rem;
+}
+
+.font-1rem {
+  font-size: 1rem;
+}
+
+.font-0_8rem {
+  font-size: 0.8rem;
+}
+
+.orange-color {
+  color: $btn-color;
+}
+
+.green-color {
+  color: $green-color;
+}
+
+.red-color {
+  color: $red-color;
+}
+
+.white-color {
+  color: $white-color;
+}
+
+.main-color {
+  color: $main-color;
+}

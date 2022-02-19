@@ -1,0 +1,124 @@
+@import "utils";
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: $body-bg;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: calc(0.3em + 1vw);
+}
+
+.center-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: $main;
+  transition: 0.5s ease;
+  cursor: pointer;
+  &:hover {
+    color: $main-dark;
+  }
+}
+
+.main {
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $white-color;
+  padding: 0.25rem 1rem;
+  .tab-group {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    li a {
+      display: block;
+      text-decoration: none;
+      padding: 15px;
+      background: rgba($gray-light, 0.25);
+      color: $gray-light;
+      font-size: 20px;
+      float: left;
+      width: 6rem;
+      text-align: center;
+      cursor: pointer;
+      transition: 0.5s ease;
+      &:hover {
+        background: $main-dark;
+        color: $white;
+      }
+    }
+    .active a {
+      background: $main;
+      color: $white;
+    }
+  }
+
+  .app {
+    display: grid;
+    grid-template-areas:
+      "a"
+      "a"
+      "a a";
+    height: 40vh;
+
+    .reverse {
+      cursor: pointer;
+    }
+
+    .quotes {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      cursor: pointer;
+      & > * {
+        margin: 1rem;
+      }
+    }
+    .archive-items {
+      font-size: 0.8rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+
+      .border-bottom {
+        border-bottom: 2px solid $body-bg;
+      }
+
+      &__item {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 0.5rem;
+        & > * {
+          flex-basis: 15%;
+          flex-grow: 0;
+          flex-shrink: 1;
+        }
+      }
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
+}
